@@ -10,7 +10,8 @@ fromSlider.addEventListener("input", function () {
     fromSlider.value = parseInt(toSlider.value);
   }
 
-  console.log("From", formattedDate(fromSlider.value));
+  const setInputDate = document.getElementById("date_start_output");
+  setInputDate.innerText = formattedDate(fromSlider.value);
 });
 
 // to slider handle
@@ -19,7 +20,8 @@ toSlider.addEventListener("input", function () {
     toSlider.value = parseInt(fromSlider.value) + minGap;
   }
 
-  console.log(formattedDate(toSlider.value));
+  const setInputDate = document.getElementById("date_end_output");
+  setInputDate.innerText = formattedDate(toSlider.value);
 });
 
 // get date value from input and return calculated date value
